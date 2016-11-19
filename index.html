@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jorts City</title>
+		<style>
+			h1 {color: blue;}
+			p {color: red;} 
+			img {height: 20%; width: 20%;}
+		</style>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<div class="container">
+			<div class="jumbotron" style=>
+				<h1>Man Clears Snow in Jorts!</h1>
+				<p class="lead">BLo at its best.
+				</p>
+				<p>
+					<a class="btn btn-lg btn-success" href="#Jorts"
+						role="bottom">See more</a>
+				</p>
+			</div>
+		</div>
+	</head>
+	<body style="background-color:yellow;">
+		<h1>This is a header.</h1>
+		<p>This <strong>is</strong> a paragraph...</p>
+		<p>This <small>is</small> a paragraph...</p>
+		<p>This <em>is</em> a paragraph...</p>
+		<a href="http://www.espn.com" target="_blank">Go to ESPN.com.</a>
+		<p>
+			<img src="http://www.trbimg.com/img-546e6303/turbine/chi-nfl-to-move-bills-jets-game-as-buffalo-battles-snowstorm-20141120">
+		<p id="Jorts">
+			<img src="C:\Users\Steve DeMaria\Pictures\southtowns_snow_LOCAL_KIRKHAM_snow_roamer_03.jpg">
+		<p>Top QBs of the 1990s:</p>
+			<ul style="list-style-type:square">
+				<li>Kelly</li>
+				<li>Marino</li>
+				<li>Young</li>
+				<li>Stewart</li>
+			</ul>
+		<div>
+			<p>Top RBs of the <span style="color:red">1990s:</p>
+			<!-- This is a comment. Will not show up on page. -->	
+				<ol>
+					<li>Smith</li>
+					<li>Bettis</li>
+					<li>Thomas</li>
+					<li>Allen</li>
+				</ol>
+		</div>
+		<div class="row">
+			<div class="col-lg-4">Column 1</div>
+			<div class="col-lg-4">Column 2</div>
+			<div class="col-lg-4">Column 3</div>
+		</div>
+		<p id="MyParagraph">
+			<button type="button"
+			onclick="document.getElementById( 'MyParagraph' ).innerHTML = '<strong>You</strong> Do.'">Who Like 'em Legs</button>
+		</p>
+		<p id="PrettyParagraph">Give me 'dem donkey legs and that big 'ol butt.</p>
+			<button type="button"
+			onclick="applyStyling()">Make it pretty!</button>
+		<script>
+			function applyStyling() {
+				var paragraph = document.getElementById("PrettyParagraph");
+				paragraph.style.color = "green"
+				paragraph.style.fontSize = "50px";
+				paragraph.style.fontWeight = "700";}
+		</script>
+		<br>	
+		<input id="numericInput" type="number">
+		<p id="result"></p>
+			<button type="button" onclick="testInput()">Test Input</button>	
+		<script>
+			function testInput(){
+				var text; 
+				var x = document.getElementById("numericInput").value;
+				if (isNaN(x) || x < 0 || x > 99) {
+					text = "Wrong input";
+					}
+				else {
+					text = "Correct input";
+					}
+			document.getElementById("result").innerHTML = text;
+			}
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+		</script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
+		</script>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<img src="http://www.trbimg.com/img-546e6303/turbine/chi-nfl-to-move-bills-jets-game-as-buffalo-battles-snowstorm-20141120">
+				</div>
+				<div class="item">
+					<img src="C:\Users\Steve DeMaria\Pictures\southtowns_snow_LOCAL_KIRKHAM_snow_roamer_03.jpg">
+				</div>
+			</div>
+		</div>	
+		<script>
+			$(document).ready(function(){
+				$("#myCarousel").carousel({interval: 2000});
+			});
+		</script>
+	</body>
+</html>
